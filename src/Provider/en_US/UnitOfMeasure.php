@@ -61,7 +61,7 @@ class UnitOfMeasure extends \Faker\Provider\Base
 
         $unit = static::randomElement(static::$lengths);
 
-        if(plural)
+        if($plural)
         {
             if(in_array($unit, $pluralExceptions))
             {
