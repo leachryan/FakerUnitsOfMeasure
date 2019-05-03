@@ -67,7 +67,7 @@ class UnitOfMeasure extends \Faker\Provider\Base
             {
                 if($unit == 'inch')
                 {
-                    $unit =. 'es';   
+                    $unit .= 'es';   
                 }
                 
                 if($unit == 'foot')
