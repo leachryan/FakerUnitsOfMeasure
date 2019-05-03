@@ -57,7 +57,7 @@ class UnitOfMeasure extends \Faker\Provider\Base
      */
     public function lengthName($plural = false)
     {
-        $pluralExceptions = ['inch'];
+        $pluralExceptions = ['inch', 'foot'];
 
         $unit = static::randomElement(static::$lengths);
 
@@ -65,7 +65,16 @@ class UnitOfMeasure extends \Faker\Provider\Base
         {
             if(in_array($unit, $pluralExceptions))
             {
-                return $unit . 'es';
+                if($unit == 'inch')
+                {
+                    $unit =. 'es';   
+                }
+                
+                if($unit == 'foot')
+                {
+                    $unit = 'feet';   
+                }
+                return $unit;
             }
 
             return $unit . 's';
